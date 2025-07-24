@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachGG - Level Up Your Esports Game</title>
+    <meta name="description" content="Transform from casual player to competitive pro with AI-powered coaching, team analytics, and performance tracking for esports.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../logo/logo.svg">
+    <!-- Mantine UI Components -->
+    <link href="https://cdn.jsdelivr.net/npm/@mantine/core@7.0.0/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@mantine/core@7.0.0/dist/index.umd.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../logo/logo.svg" alt="CoachGG Logo" class="logo">
+                <span class="logo-text">CoachGG</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#screenshots" class="nav-link">Screenshots</a>
+                <button class="cta-button" onclick="scrollToWaitlist()">Join Waitlist</button>
+            </div>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Level Up Your <span class="neon-text">Esports Game</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Transform from casual player to competitive pro with AI-powered coaching, 
+                    team analytics, and performance tracking for Valorant, League of Legends, Dota 2, and more.
+                </p>
+                <div class="hero-cta">
+                    <button class="primary-button" onclick="scrollToWaitlist()">
+                        Join the Waitlist
+                        <span class="button-icon">→</span>
+                    </button>
+                    <div class="waitlist-stats">
+                        <span class="stats-number" id="waitlist-count">0</span>
+                        <span class="stats-text">gamers already joined</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="app-preview">
+                    <div class="main-preview-container">
+                        <img src="resources/A1.png" alt="CoachGG Dashboard" class="preview-image main-preview">
+                    </div>
+                    <div class="floating-cards">
+                        <div class="floating-card card-1">
+                            <img src="resources/A2.png" alt="Team Analytics" class="card-image">
+                        </div>
+                        <div class="floating-card card-2">
+                            <img src="resources/A3.png" alt="AI Coach" class="card-image">
+                        </div>
+                        <div class="floating-card card-3">
+                            <img src="resources/A4.png" alt="Performance Charts" class="card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Everything You Need to <span class="neon-text">Go Pro</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>AI-Powered Coaching</h3>
+                    <p>Get personalized insights and improvement suggestions from our advanced AI coach that analyzes your gameplay patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v5h5"/>
+                            <path d="M21 21v-5h-5"/>
+                            <path d="M8 8l13 13"/>
+                            <path d="M3 21l5-5"/>
+                            <path d="M21 3l-5 5"/>
+                        </svg>
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track your progress with detailed statistics, win rate trends, and performance heatmaps across all your games.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Team Management</h3>
+                    <p>Create and manage teams, compare member performance, and coordinate training sessions with built-in calendar tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                            <path d="M4 22h16"/>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                        </svg>
+                    </div>
+                    <h3>Achievement System</h3>
+                    <p>Stay motivated with 20+ achievements, progress tracking, and gamified experiences that reward your improvement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                            <path d="M9 22v-4h6v4"/>
+                            <path d="M8 6h.01"/>
+                            <path d="M16 6h.01"/>
+                            <path d="M12 6h.01"/>
+                            <path d="M12 10h.01"/>
+                            <path d="M12 14h.01"/>
+                            <path d="M16 10h.01"/>
+                            <path d="M16 14h.01"/>
+                            <path d="M8 10h.01"/>
+                            <path d="M8 14h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Game Support</h3>
+                    <p>Track performance across Valorant, League of Legends, Dota 2, CS2, and more popular esports titles.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Insights</h3>
+                    <p>Get instant feedback on your matches with detailed analysis and actionable recommendations for improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Track Your Matches</h3>
+                        <p>Log your games with detailed statistics and performance metrics</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get AI Analysis</h3>
+                        <p>Receive personalized coaching insights and improvement suggestions</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Level Up</h3>
+                        <p>Apply recommendations, track progress, and watch your skills improve</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title">See CoachGG in <span class="neon-text">Action</span></h2>
+            <p class="section-subtitle">Get a preview of the powerful features that will help you dominate the competition</p>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-container">
+                        <img src="resources/A1.png" alt="CoachGG Dashboard Overview" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <div class="screenshot-info">
+                                <h3>Dashboard Overview</h3>
+                                <p>Your complete gaming performance at a glance with real-time statistics and insights</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="screenshot-container">
+                        <img src="resources/A2.png" alt="Team Analytics" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <div class="screenshot-info">
+                                <h3>Team Analytics</h3>
+                                <p>Compare team member performance and track collective progress with detailed charts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="screenshot-container">
+                        <img src="resources/A3.png" alt="AI Coach Interface" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <div class="screenshot-info">
+                                <h3>AI Coach</h3>
+                                <p>Get personalized coaching recommendations and strategic insights powered by AI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="screenshot-container">
+                        <img src="resources/A4.png" alt="Performance Charts" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <div class="screenshot-info">
+                                <h3>Performance Charts</h3>
+                                <p>Visualize your improvement with interactive charts and detailed performance metrics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="waitlist">
+        <div class="container">
+            <div class="waitlist-content">
+                <h2 class="section-title">Ready to <span class="neon-text">Level Up?</span></h2>
+                <p class="waitlist-subtitle">Join thousands of gamers already on the waitlist. Be the first to know when CoachGG launches!</p>
+                
+                <form class="waitlist-form" id="waitlistForm">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <input type="text" id="gamertag" name="gamertag" placeholder="Your gamertag (optional)">
+                        <select id="primaryGame" name="primaryGame">
+                            <option value="">Select your primary game (optional)</option>
+                            <option value="valorant">Valorant</option>
+                            <option value="lol">League of Legends</option>
+                            <option value="dota2">Dota 2</option>
+                            <option value="cs2">Counter-Strike 2</option>
+                            <option value="overwatch">Overwatch 2</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="privacy-notice">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span class="checkmark"></span>
+                            <span class="consent-text">
+                                I agree to receive updates about CoachGG and understand that my information will be collected and stored in accordance with Alberta's Personal Information Protection Act (PIPA). 
+                                <a href="#privacy-modal" onclick="openPrivacyModal()">View Privacy Policy</a>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-button" id="submitButton">
+                        <span class="button-text">Join the Waitlist</span>
+                        <span class="loading-spinner" style="display: none;">⟳</span>
+                    </button>
+                </form>
+                
+                <div class="success-message" id="successMessage" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Welcome to the CoachGG Family!</h3>
+                    <p>You're now on the waitlist. We'll notify you as soon as we launch!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../logo/logo.svg" alt="CoachGG Logo" class="logo">
+                    <span class="logo-text">CoachGG</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy-modal" onclick="openPrivacyModal()">Privacy Policy</a>
+                    <a href="#terms-modal" onclick="openTermsModal()">Terms of Service</a>
+                    <a href="mailto:support@coachgg.com">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CoachGG. All rights reserved. | Made with ❤️ for the esports community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Information Collection and Use</h3>
+                <p>CoachGG ("we," "our," or "us") collects and processes personal information in accordance with Alberta's Personal Information Protection Act (PIPA) and other applicable privacy laws.</p>
+                
+                <h3>What Information We Collect</h3>
+                <ul>
+                    <li><strong>Email Address:</strong> Required for waitlist registration and communication</li>
+                    <li><strong>Gamertag:</strong> Optional, used to personalize your experience</li>
+                    <li><strong>Primary Game:</strong> Optional, helps us understand our user base</li>
+                    <li><strong>Technical Information:</strong> IP address, browser type, and device information for security and analytics</li>
+                </ul>
+                
+                <h3>How We Use Your Information</h3>
+                <ul>
+                    <li>To notify you about CoachGG's launch and updates</li>
+                    <li>To provide customer support and respond to inquiries</li>
+                    <li>To improve our services and user experience</li>
+                    <li>To comply with legal obligations</li>
+                </ul>
+                
+                <h3>Information Sharing</h3>
+                <p>We do not sell, trade, or rent your personal information to third parties. We may share information only:</p>
+                <ul>
+                    <li>With your explicit consent</li>
+                    <li>To comply with legal requirements</li>
+                    <li>With trusted service providers who assist in our operations (under strict confidentiality agreements)</li>
+                </ul>
+                
+                <h3>Data Security</h3>
+                <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                
+                <h3>Your Rights (Under PIPA)</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Request correction of inaccurate information</li>
+                    <li>Withdraw consent for marketing communications</li>
+                    <li>Request deletion of your information (subject to legal requirements)</li>
+                </ul>
+                
+                <h3>Contact Information</h3>
+                <p>For privacy-related questions or to exercise your rights, contact us at:</p>
+                <p>Email: privacy@coachgg.com<br>
+                Address: [Your Business Address], Alberta, Canada</p>
+                
+                <p><strong>Last Updated:</strong> December 2024</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Terms of Service</h2>
+                <span class="close" onclick="closeModal('termsModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Acceptance of Terms</h3>
+                <p>By joining our waitlist, you agree to these Terms of Service and our Privacy Policy.</p>
+                
+                <h3>Waitlist Terms</h3>
+                <ul>
+                    <li>Joining the waitlist does not guarantee access to CoachGG</li>
+                    <li>We reserve the right to invite users based on various criteria</li>
+                    <li>You may unsubscribe from the waitlist at any time</li>
+                </ul>
+                
+                <h3>Prohibited Uses</h3>
+                <ul>
+                    <li>Providing false or misleading information</li>
+                    <li>Using automated systems to join the waitlist</li>
+                    <li>Attempting to circumvent our systems</li>
+                </ul>
+                
+                <h3>Limitation of Liability</h3>
+                <p>CoachGG is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of our services.</p>
+                
+                <p><strong>Last Updated:</strong> December 2024</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
